@@ -5,6 +5,7 @@ const tempValue = document.querySelector(".temp-value")
 const humidityValue= document.querySelector(".humid-value")
 const weatherValue = document.querySelector(".weather")
 const windSpeed = document.querySelector(".wind-value")
+const src = document.querySelector("img").getAttribute("src")
 
 const hrs = document.querySelector(".hr")
 const mins = document.querySelector(".min")
@@ -16,9 +17,11 @@ const years = document.querySelector(".year")
 const months = ["Jan", "Feb", "Mar", "Apr", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
 const Week = ["Mon", "Tues", "wed", "Thur", "Fri", "Sat", "Sun"]
 
+
 let setup = {
     apiKey: "2c522923a9715003754fabf3b48daa09",
     loadWeather: () => {
+        
         let lat = 0, long = 0
         const x = document.querySelector(".weather-content");
         if (navigator.geolocation) {
